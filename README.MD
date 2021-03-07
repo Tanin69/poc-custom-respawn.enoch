@@ -80,7 +80,7 @@ player setDamage 1
 * Dans la console de débogage, exécuter :
 
 ```sqf
-isRespawnCondMet = true
+goRsp = true
 ```
 
 -> Vous réapparaissez
@@ -171,15 +171,11 @@ private _rspPos = [[[position _leader,20]]] call BIS_fnc_randomPos;
 [player, _rspPos, true] call BIS_fnc_moveToRespawnPosition;
 ```
 
-Le script initPlayerLocal.sqf est inchangé
-
-
-
 ## Tests effectués sur dédié (merci nico57 !)
 
 * Déco retour lobby/reco sur le même slot -> pas de souci, le joueur revient en mode spectateur
 * Déco arma, retour lobby sur le même slot -> pas de souci, le joueur revient en mode spectateur
-* Déco retour lobby, retour sur slot IA fermé -> retour vivant en jeu. Une IA pop sur le slot précédemment occupé par le joueur
+* Déco retour lobby, retour sur slot IA fermé -> retour vivant en jeu. Une IA pope sur le slot précédemment occupé par le joueur
 * Verrouillage des slots -> les joueurs reviennent en mode spéctateur
 
 ## Ce qu'il reste à faire
